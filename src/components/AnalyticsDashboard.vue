@@ -64,11 +64,11 @@ export default {
       // Generate table data from dailyAnalytics
       this.tableData = this.dailyAnalytics.map((cubic, index) => ({
         id: index + 1,
-        name: `Item ${index + 1}`,
-        address: `${index + 1} Main St`,
+        name: Item ${index + 1},
+        address: ${index + 1} Main St,
         currentCubic: cubic,
         totalCubic: this.dailyAnalytics.slice(0, index + 1).reduce((sum, val) => sum + val, 0),
-        date: `${year}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(index + 1).padStart(2, '0')}`
+        date: ${year}-${String(now.getMonth() + 1).padStart(2, '0')}-${String(index + 1).padStart(2, '0')}
       }));
     },
     startRealTimeUpdates() {
