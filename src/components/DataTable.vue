@@ -1,5 +1,5 @@
 <template>
-  <div class="data-table">
+<div class="table-responsive">
     <h2>Data Records</h2>
     
     <table>
@@ -68,5 +68,20 @@ th {
 
 tr:hover {
   background-color: #f9f9f9;
+}
+.table-responsive {
+  overflow-x: auto;
+  width: 100%;
+}
+
+/* Adjust padding for smaller screens */
+@media (max-width: 768px) {
+  .data-table {
+    padding: 15px;
+  }
+  
+  th, td {
+    padding: 8px 10px;
+  }
 }
 </style>

@@ -4,7 +4,7 @@
     
     <div class="dashboard-grid">
       <AnalyticsCharts 
-        :hourlyData="hourlyData"
+     
         :dailyData="dailyAnalytics"
         :monthlyData="monthlyAnalytics" 
       />
@@ -26,14 +26,14 @@ export default {
   },
   data() {
     return {
-      hourlyData: [], // Add your hourly data here if needed
+      
       
       // Daily data for current month
       dailyAnalytics: (() => {
         const now = new Date();
         const daysInMonth = new Date(now.getFullYear(), now.getMonth() + 1, 0).getDate();
         return Array.from({ length: daysInMonth }, (_, i) => 
-          Math.floor(Math.random() * 10) // Random cubic values for demo
+          Math.floor(Math.random() * 10) 
         );
       })(),
       
@@ -52,8 +52,8 @@ export default {
     }
   },
   created() {
-    this.updateTableData(); // Initial population
-    this.startRealTimeUpdates(); // Start periodic updates
+    this.updateTableData(); 
+    this.startRealTimeUpdates(); 
   },
   methods: {
     updateTableData() {
@@ -97,5 +97,22 @@ export default {
 h1 {
   color: #2c3e50;
   margin-bottom: 20px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 20px;
+}
+
+/* Responsive styles */
+@media (min-width: 1024px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .dashboard {
+    padding: 30px;
+  }
 }
 </style>
