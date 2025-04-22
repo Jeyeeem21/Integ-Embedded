@@ -26,7 +26,7 @@ export default {
   },
   data() {
     return {
-      hourlyData: [], // Add your hourly data here if needed
+
       
       // Daily data for current month
       dailyAnalytics: (() => {
@@ -37,7 +37,7 @@ export default {
         );
       })(),
       
-      // Monthly data
+    
       monthlyAnalytics: [
         { month: 'January', cubic: 45 },
         { month: 'February', cubic: 38 },
@@ -98,4 +98,4 @@ h1 {
   color: #2c3e50;
   margin-bottom: 20px;
 }
-</style>
+</style
